@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 const porta = 3000;
-const routes = require('./routes')
-const path = require('path')
+const routes = require('./routes');
 
 app.use(express.urlencoded({extended: true}));
 app.use(routes);

@@ -10,11 +10,11 @@ exports.contratoanswer = (req, res) => {
     const emailCliente = req.body.email;
     const numeroCliente = req.body.numero;
 
-    if (numeroCliente.toString().length < 11 || numeroCliente.toString().length > 11) {
-        return res.render('cadastrarcontrato', { error: 'O numero deve ter 11 digitos' });
+    if (numeroCliente.toString().length < 13 || numeroCliente.toString().length > 13) {
+        return res.render('cadastrarcontrato', { error: 'O numero deve ter 13 digitos' });
     }
 
-    const sql = 'INSERT INTO Cliente (NOME, SOBRENOME, EMAIL, NUMERO_TEL) VALUES (?,?,?,?)';
+    const sql = 'INSERT INTO Clientecontatos (NOME, SOBRENOME, EMAIL, NUMERO_TEL) VALUES (?,?,?,?)';
 
     db.query(sql, [nomeCliente, sobrenomeCliente, emailCliente, numeroCliente], (err, result) => {
         if (err) {
