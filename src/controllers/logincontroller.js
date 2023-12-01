@@ -1,5 +1,5 @@
 exports.login = (req, res) => {
-    res.render('index');
+    res.render('login');
 }
 
 exports.loginAnswer = (req,res) => {
