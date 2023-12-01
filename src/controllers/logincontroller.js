@@ -21,20 +21,20 @@ exports.loginAnswer = (req,res) => {
     const emailcreate = req.body.emailcreate;
     const senhacreate = req.body.senhacreate;
 
-    console.log(nomecreate, emailcreate, senhacreate)
+    console.log(nomecreate, emailcreate, senhacreate);
 
     const sql = 'INSERT INTO CLIENTE(NOME, EMAIL, SENHA) VALUES (?,?,?);'
 
     if(!senhacreate) {
-        return res.render('login', {errorsenha: 'A senha não pode ser nula'})
+        return res.render('login', {errorsenha: 'A senha não pode ser nula'});
     }
 
     db.query(sql,[nomecreate, emailcreate, senhacreate], (err, result) => {
         if(err) {
-            console.log(err)
+            console.log(err);
         } else {
-            console.log('dados inseridos', result)
+            console.log('dados inseridos', result);
         }
-    })
-    res.redirect('/login/index')
+    });
+    res.redirect('/login/index');
 }

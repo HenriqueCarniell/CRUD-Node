@@ -64,17 +64,6 @@
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Nome: </label>
                         <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="senhacreate">
-                        <div>
-                            <% if (locals.error) { %>
-                                <div class="alert alert-danger mt-3" role="alert">
-                                    <%= error %>
-                                </div>
-                            <% } else { %>
-                                <div class="alert alert-success mt-3" role="alert">
-                                    <%= 'A conta foi criada com sucesso' %>
-                                </div>
-                            <% } %>
-                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Criar conta</button>
                 </form>
